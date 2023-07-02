@@ -15,7 +15,6 @@ public class TestTPO {
 
 	public static ArrayList<Paciente> nuevoPaciente(AdministradordeColaPrioridadTDA admColas) { 
 		Scanner lector = new Scanner(System.in);
-	
 		int dni = 0;
 		String apellido = "0";
 		String nombre = "0";
@@ -23,18 +22,14 @@ public class TestTPO {
 		int sinPrioridad  = 0;
 		boolean continua;
 		ArrayList<Paciente> listaPacientes = new ArrayList<Paciente>();
-		lector = new Scanner(System.in);
-				
+		lector = new Scanner(System.in);	
 		do {
 			try {
-				continua = false;
-						
+				continua = false;	
 				System.out.println("Ingrese DNI: ");
 				dni = lector.nextInt();
-						
 				System.out.println("Ingrese Apellido: ");
 				apellido = lector.next();
-						
 				System.out.println("Ingrese Nombre: ");
 				nombre = lector.next();
 				} 
@@ -61,7 +56,6 @@ public class TestTPO {
 		Paciente nuevoPaciente= new Paciente(dni, apellido, nombre, prioridad);
 		listaPacientes.add(nuevoPaciente);
 		return listaPacientes;
-		
 	}
 	
 	
