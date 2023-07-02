@@ -28,9 +28,6 @@ public class TestTPO {
 		do {
 			try {
 				continua = false;
-				//System.out.println("Ingrese la cantidad de puestos de atención: ");
-				//puestosAt = lector.nextInt();
-				//admColas.inicializar(puestosAt);
 						
 				System.out.println("Ingrese DNI: ");
 				dni = lector.nextInt();
@@ -50,6 +47,7 @@ public class TestTPO {
 		
 		// CargarColaPrioridad: Llena la cola prioridad con los elementos para preparar la simulación.
 		//admColas.acolar(4455, -22);
+		
 		System.out.println("Ingrese Prioridad, en el caso de que tenga: ");
 		prioridad = lector.nextInt();
 		if (prioridad == 25 || prioridad == 15 || prioridad == 10){ // Mujer embarazada, Alguna discapacidad, Paciente de guardia
@@ -66,7 +64,6 @@ public class TestTPO {
 		
 	}
 	
-
 	
 	/**
 	 * Lista por pantalla los datos de los pacientes.
@@ -88,8 +85,6 @@ public class TestTPO {
 		
 		//DiccionarioMultipleTDA pacientes = new DicMultipleA(); 
 		//pacientes.inicializarDiccionario();
-		
-
 
 		Scanner lector = new Scanner(System.in);
 		AdministradordeColaPrioridadTDA admColas = new AdministradordeColaPrioridad(); 
