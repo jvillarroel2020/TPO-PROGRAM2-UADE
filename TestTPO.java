@@ -11,13 +11,11 @@ import impl.ColaPrioridadLD;
 import impl.DicMultipleA;
 
 
-
 public class TestTPO {
 
-	public static ArrayList<Paciente> nuevoPaciente(AdministradordeColaPrioridadTDA admColas) { //AdministradordeColaPrioridadTDA admColas
+	public static ArrayList<Paciente> nuevoPaciente(AdministradordeColaPrioridadTDA admColas) { 
 		Scanner lector = new Scanner(System.in);
-		//AdministradordeColaPrioridadTDA admColas = new AdministradordeColaPrioridad(); 
-		//int puestosAt = 0;
+	
 		int dni = 0;
 		String apellido = "0";
 		String nombre = "0";
@@ -56,10 +54,11 @@ public class TestTPO {
 		prioridad = lector.nextInt();
 		if (prioridad == 25 || prioridad == 15 || prioridad == 10){ // Mujer embarazada, Alguna discapacidad, Paciente de guardia
 			admColas.acolar(dni, prioridad);
-			} else {
-				prioridad = -(sinPrioridad+1);
-				admColas.acolar(dni, prioridad);
-				}
+			} 
+		else {
+			prioridad = -(sinPrioridad+1);
+			admColas.acolar(dni, prioridad);
+		}
 		
 		Paciente nuevoPaciente= new Paciente(dni, apellido, nombre, prioridad);
 		listaPacientes.add(nuevoPaciente);
@@ -67,10 +66,7 @@ public class TestTPO {
 		
 	}
 	
-	//public static AdministradordeColaPrioridadTDA agregarPaciente() {
-	//	AdministradordeColaPrioridadTDA cola = new AdministradordeColaPrioridad();	
-	//	return cola;
-	//}
+
 	
 	/**
 	 * Lista por pantalla los datos de los pacientes.
@@ -90,10 +86,8 @@ public class TestTPO {
 		System.out.println("            UADE LABORATORY CENTER       ");
 		System.out.println();
 		
-		//ColaPrioridadTDA aux = new ColaPrioridadLD();
-		//AdministradordeColaPrioridadTDA admColas = new AdministradordeColaPrioridad(); 
-		DiccionarioMultipleTDA pacientes = new DicMultipleA(); 
-		pacientes.inicializarDiccionario();
+		//DiccionarioMultipleTDA pacientes = new DicMultipleA(); 
+		//pacientes.inicializarDiccionario();
 		
 
 
@@ -112,7 +106,7 @@ public class TestTPO {
 			lector.next();
 		}
 		ArrayList<Paciente> lista = nuevoPaciente(admColas);
-		//agregarPaciente(admColas, lista);
+	
 		
 		
 		// Simular: desacolar los elementos hasta que la cola quede vacía, 
