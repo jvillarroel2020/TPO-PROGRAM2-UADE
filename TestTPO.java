@@ -15,6 +15,7 @@ public class TestTPO {
 
 	public static void main(String[] args) { //test con 7 puestos de atención y 60 clientes de distintas prioridades
 		System.out.println("   UADE LABORATORY CENTER   ");
+		System.out.println();
 		
 		//ColaPrioridadTDA aux = new ColaPrioridadLD();
 		AdministradordeColaPrioridadTDA admColas = new AdministradordeColaPrioridad(); 
